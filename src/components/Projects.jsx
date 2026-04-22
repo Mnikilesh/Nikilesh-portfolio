@@ -15,7 +15,7 @@ const projects = [
     solution: 'Dual-login platform with NLP-based job-to-resume matching. Extracts 40+ technical skills, computes ATS scores, and auto-ranks candidates by fit.',
     impact: 'Cuts recruiter screening effort by ~60%. Includes mock interview module covering 5 tech domains.',
     stack: ['Python', 'Scikit-learn', 'NLTK', 'Streamlit', 'MySQL'],
-    live: 'https://smart-resume-demo.streamlit.app',
+    live: 'https://huggingface.co/spaces/nikileshmamidala/Resume-Analyzer',
     github: 'https://github.com/Mnikilesh/Smart-Resume-AI-analysis-and-Shortlisting',
     accent: 'rgba(91,141,239,0.08)',
     accentBorder: 'rgba(91,141,239,0.2)',
