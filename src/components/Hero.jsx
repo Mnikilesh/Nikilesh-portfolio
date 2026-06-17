@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, Download, Github, Linkedin } from 'lucide-react'
+import { ArrowRight, Download, Eye, Github, Linkedin } from 'lucide-react'
+import { useResumeStats } from '../hooks/useResumeStats'
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 20 },
@@ -8,6 +9,8 @@ const fadeUp = (delay = 0) => ({
 })
 
 export default function Hero() {
+  const { stats, track } = useResumeStats()
+
   return (
     <section
       id="home"
@@ -67,7 +70,7 @@ export default function Hero() {
         </motion.p>
 
         {/* CTA Buttons */}
-        <motion.div {...fadeUp(0.5)} className="flex flex-wrap gap-3 mb-16">
+        <motion.div {...fadeUp(0.5)} className="flex flex-wrap items-center gap-3 mb-3">
           <a
             href="#projects"
             className="group inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-sm text-white"
@@ -78,13 +81,31 @@ export default function Hero() {
           </a>
           <a
             href="/resume-2025.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => track('view')}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/10 text-sm text-[#EAEAEA] hover:bg-white/[0.04] hover:border-white/20 transition-all duration-200"
+          >
+            <Eye size={15} />
+            View Resume
+          </a>
+          <a
+            href="/resume-2025.pdf"
             download
+            onClick={() => track('download')}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-white/10 text-sm text-[#EAEAEA] hover:bg-white/[0.04] hover:border-white/20 transition-all duration-200"
           >
             <Download size={15} />
-            Resume
+            Download
           </a>
         </motion.div>
+
+        {/* Resume stats */}
+        <motion.p {...fadeUp(0.55)} className="mono text-xs text-[#636363] mb-16">
+          {stats.views !== null
+            ? `${stats.views} views · ${stats.downloads} downloads`
+            : '\u00A0'}
+        </motion.p>
 
         {/* Stats row */}
         <motion.div

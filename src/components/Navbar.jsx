@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Download } from 'lucide-react'
+import { useResumeStats } from '../hooks/useResumeStats'
 
 const links = [
   { label: 'Projects', href: '#projects' },
@@ -12,6 +13,7 @@ const links = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+  const { track } = useResumeStats()
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 24)
@@ -48,13 +50,26 @@ export default function Navbar() {
                 {l.label}
               </a>
             ))}
-            <a
-              href="/resume-2025.pdf"
-              download
-              className="text-sm px-4 py-1.5 border border-white/10 rounded-md text-[#EAEAEA] hover:border-white/25 hover:bg-white/[0.04] transition-all duration-200"
-            >
-              Resume
-            </a>
+            <div className="flex items-center">
+              <a
+                href="/resume-2025.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => track('view')}
+                className="text-sm px-4 py-1.5 border border-white/10 rounded-l-md text-[#EAEAEA] hover:border-white/25 hover:bg-white/[0.04] transition-all duration-200"
+              >
+                Resume
+              </a>
+              <a
+                href="/resume-2025.pdf"
+                download
+                onClick={() => track('download')}
+                aria-label="Download resume"
+                className="px-2.5 py-1.5 border border-l-0 border-white/10 rounded-r-md text-[#636363] hover:text-[#EAEAEA] hover:border-white/25 hover:bg-white/[0.04] transition-all duration-200"
+              >
+                <Download size={14} />
+              </a>
+            </div>
           </div>
 
           {/* Mobile toggle */}
@@ -90,10 +105,20 @@ export default function Navbar() {
               ))}
               <a
                 href="/resume-2025.pdf"
-                download
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => track('view')}
                 className="text-sm text-[#EAEAEA] py-2"
               >
-                Resume ↓
+                View Resume
+              </a>
+              <a
+                href="/resume-2025.pdf"
+                download
+                onClick={() => track('download')}
+                className="text-sm text-[#EAEAEA] py-2"
+              >
+                Download Resume ↓
               </a>
             </div>
           </motion.div>
