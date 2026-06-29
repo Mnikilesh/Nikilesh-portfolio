@@ -66,7 +66,7 @@ export default function Hero() {
           {...fadeUp(0.4)}
           className="text-[#EAEAEA]/70 text-lg md:text-xl max-w-xl leading-relaxed mb-10 font-light"
         >
-         <span className="text-[#EAEAEA] font-medium">Building intelligent applications, scalable backend systems, and modern web experiences.</span>
+       <span className="text-[#EAEAEA] font-medium">Building intelligent applications, scalable backend systems, and modern web experiences.</span>
         </motion.p>
 
         {/* CTA Buttons */}
@@ -113,9 +113,9 @@ export default function Hero() {
           className="flex flex-wrap gap-8 pt-8 border-t border-white/[0.06]"
         >
           {[
-            { num: '4+', label: 'Projects Shipped' },
+            { num: '4+', label: 'Academic Projects' },
             { num: '2', label: 'Internships' },
-            { num: '99%', label: 'Uptime (Live App)' },
+            { num: '90+%', label: 'Uptime (Live App)' },
             { num: '3+', label: 'Months in Production' },
           ].map(({ num, label }) => (
             <div key={label}>
