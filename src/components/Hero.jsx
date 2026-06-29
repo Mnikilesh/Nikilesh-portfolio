@@ -58,7 +58,7 @@ export default function Hero() {
           {...fadeUp(0.3)}
           className="mono text-[#636363] text-base mb-4 tracking-tight"
         >
-          // Full Stack Developer &amp; AI Systems Builder
+           Aspiring Software Engineer; 
         </motion.p>
 
         {/* Tagline */}
@@ -66,7 +66,7 @@ export default function Hero() {
           {...fadeUp(0.4)}
           className="text-[#EAEAEA]/70 text-lg md:text-xl max-w-xl leading-relaxed mb-10 font-light"
         >
-          I build systems that <span className="text-[#EAEAEA] font-medium">ship to real users</span> — from AI-powered hiring tools to e-commerce running a live family business.
+         <span className="text-[#EAEAEA] font-medium">Building intelligent applications, scalable backend systems, and modern web experiences.</span>
         </motion.p>
 
         {/* CTA Buttons */}

@@ -10,7 +10,7 @@ const projects = [
     tagColor: 'rgba(91,141,239,0.15)',
     tagText: '#7EB2FF',
     title: 'Smart-Resume',
-    subtitle: 'AI Resume Analysis Platform',
+    subtitle: 'Resume Analysis Platform',
     problem: 'Recruiters manually scan hundreds of resumes — a slow, inconsistent, bias-prone process that misses good candidates.',
     solution: 'Dual-login platform with NLP-based job-to-resume matching. Extracts 40+ technical skills, computes ATS scores, and auto-ranks candidates by fit.',
     impact: 'Cuts recruiter screening effort by ~60%. Includes mock interview module covering 5 tech domains.',
