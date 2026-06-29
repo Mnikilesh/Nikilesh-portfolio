@@ -6,12 +6,12 @@ import SectionHeader from './SectionHeader'
 const projects = [
   {
     num: '01',
-    tag: 'AI · NLP',
+    tag: 'Live · NLP',
     tagColor: 'rgba(91,141,239,0.15)',
     tagText: '#7EB2FF',
     title: 'Smart-Resume',
     subtitle: 'Resume Analysis Platform',
-    problem: 'Recruiters manually scan hundreds of resumes — a slow, inconsistent, bias-prone process that misses good candidates.',
+    problem: 'Recruiters manually scan hundreds of resumes - a slow, inconsistent, bias-prone process that misses good candidates.',
     solution: 'Dual-login platform with NLP-based job-to-resume matching. Extracts 40+ technical skills, computes ATS scores, and auto-ranks candidates by fit.',
     impact: 'Cuts recruiter screening effort by ~60%. Includes mock interview module covering 5 tech domains.',
     stack: ['Python', 'Scikit-learn', 'NLTK', 'Streamlit', 'MySQL'],
@@ -27,7 +27,7 @@ const projects = [
     tagText: '#34D399',
     title: 'Padmavathi Fruits',
     subtitle: 'Full-Stack E-Commerce · Family Business',
-    problem: "A local family fruit business relied entirely on manual phone orders — zero visibility, constant errors, no scalability.",
+    problem: "A local family fruit business relied entirely on manual phone orders - zero visibility, constant errors, no scalability.",
     solution: 'Built and deployed a complete ordering platform: admin dashboard, dynamic pricing, cart, order management. Zero manual order-taking.',
     impact: '99%+ uptime over 3+ months in live production. Real daily orders running on this system right now.',
     stack: ['JavaScript', 'Python', 'MySQL', 'Bootstrap', 'XAMPP'],
